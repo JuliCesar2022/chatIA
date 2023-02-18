@@ -23,7 +23,7 @@ Mongoclient.connect( async err => {
  
 
 })
-hpm9Coi0cvZ6a9eWxkldvjXxxftFHMHd
+
 //Redis
 var Redisclient = redis.createClient(12984, "redis-12984.c89.us-east-1-3.ec2.cloud.redislabs.com",{no_ready_check: true}); 
 Redisclient.auth("", function (err) { if (err) throw err; }); 
