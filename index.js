@@ -7,7 +7,7 @@ const express = require('express')
 
 //Open IA
 const configuration = new Configuration({
-    apiKey: "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",
+    apiKey: "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",
 });
 const openai = new OpenAIApi(configuration);
 
@@ -118,12 +118,7 @@ async function crearBot(chatID,userName,userId){
       ubicacion de la empresa:
       pais: colombia
       departamento: Bolivar
-
-      
-
-
-    
-       `
+       `;
 
     
        await BotsCollection.insertOne( {userId,chatID,userName,conversation:initConfigBot} );
