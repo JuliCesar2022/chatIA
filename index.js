@@ -1,16 +1,15 @@
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const { Configuration, OpenAIApi } = require("openai");
+const configuration = new Configuration({
+apiKey: "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",
+});
+const openai = new OpenAIApi(configuration);
 const ObjectID = require('mongodb').ObjectID;
 const readline = require('readline');
 var redis = require("redis");
 const express = require('express')
 
 //Open IA
-const configuration = new Configuration({
-    apiKey: "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",
-});
-const openai = new OpenAIApi(configuration);
-
 
 //Mongo DB
 const uriMongo = "mongodb+srv://Sergio-All:OwSA0rjmhJKtyE7M@cluster0.ztbdwxd.mongodb.net/?retryWrites=true&w=majority";
@@ -141,7 +140,7 @@ async function sendQuestion(question,bot){
         model: "text-davinci-003",
         prompt: question,
         temperature: 0.9,
-        max_tokens: 3000,
+        max_tokens: 300,
         top_p: 1,
         frequency_penalty: 0,
         presence_penalty: 0.6,
